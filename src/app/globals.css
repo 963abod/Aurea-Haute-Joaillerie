@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0B0B0C;
+    --bg-secondary: #161618;
+    --text-primary: #FDFBF7;
+    --text-muted: #A1A1AA;
+    --accent-gold: #C5A059;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #0B0B0C;
+    color: #FDFBF7;
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #0B0B0C;
+    color: #FDFBF7;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Custom scrollbar for luxury aesthetics */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B0B0C;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A2E;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C5A059;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #E8D8A6 0%, #C5A059 50%, #8A6B29 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .border-gold-subtle {
+    border-color: rgba(197, 160, 89, 0.2);
+  }
+
+  .border-gold-glow {
+    border-color: rgba(197, 160, 89, 0.5);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.15);
+  }
+
+  .bg-glass {
+    background: rgba(11, 11, 12, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .bg-glass-card {
+    background: rgba(22, 22, 24, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+  }
+}
+
+/* Hide default cursor on devices supporting hover if custom cursor is enabled */
+@media (pointer: fine) {
+  .custom-cursor-active {
+    cursor: none;
+  }
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active input,
+  .custom-cursor-active select {
+    cursor: none;
+  }
+}
