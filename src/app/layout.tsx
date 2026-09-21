@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} ${naskh.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} ${naskh.variable}`}>
       <body className="bg-obsidian text-ivory-warm antialiased selection:bg-champagne-gold selection:text-obsidian custom-cursor-active">
         <LanguageProvider>
           <CartProvider>
